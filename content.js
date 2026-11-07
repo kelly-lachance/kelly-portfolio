@@ -16,7 +16,7 @@ const PORTFOLIO = {
     photo: "kelly-profile.png",
     cv: "" // Exemple : "assets/Kelly-Lachance-CV.pdf"
   },
- 
+
   // SECTION « À PROPOS » : titre + un élément du tableau par paragraphe
   aboutSection: {
     title: "Un parcours scientifique, une nouvelle direction",
@@ -27,58 +27,40 @@ const PORTFOLIO = {
       "Pragmatique, autonome et persévérante, j’aime comprendre comment les choses fonctionnent, creuser les sujets et trouver des solutions. J’apporte à la data la rigueur d’une scientifique et la compréhension des enjeux business d’une consultante."
     ]
   },
- 
-  projectsIntro: "Une sélection de projets qui illustrent ma montée en compétences : de l’analyse exploratoire à la conception de solutions data. Chaque fiche pourra détailler la problématique, les données, la méthode et les résultats.",
- 
+
+  projectsIntro: "Les projets que j’ai menés pendant ma formation, du besoin métier jusqu’à la restitution des résultats.",
+
   // AJOUTER UN PROJET : copier un objet complet dans ce tableau.
+  // context : ligne courte affichée au-dessus du titre (facultatif)
+  // highlights : points clés affichés en liste (facultatif)
   // image : chemin vers une image dans assets/ (facultatif)
   // github et demo : URL (facultatives)
   projects: [
     {
-      title: "Analyse de données agronomiques",
-      description: "Explorer un jeu de données agricole, identifier les tendances et produire des indicateurs utiles à la décision.",
-      technologies: ["Python", "Pandas", "SQL", "Visualisation"],
-      image: "",
-      github: "",
-      demo: "",
-      status: "Projet à documenter : contexte, données, résultats."
-    },
-    {
-      title: "Exploration de données Life Sciences",
-      description: "Nettoyer, analyser et visualiser des données liées aux sciences du vivant.",
-      technologies: ["Python", "EDA", "Data Viz"],
-      image: "",
-      github: "",
-      demo: "",
-      status: "Projet à documenter : problématique, méthode, résultats."
-    },
-    {
-      title: "Pipeline ETL automatisé",
-      description: "Construire un flux de données reproductible : extraction, transformation, chargement et contrôles.",
-      technologies: ["Python", "SQL", "ETL"],
-      image: "",
-      github: "",
-      demo: "",
-      status: "Projet à documenter : architecture, tests, repository."
-    },
-    {
-      title: "Data Warehouse",
-      description: "Structurer les données pour faciliter leur exploitation analytique et leur maintenance.",
-      technologies: ["SQL", "Modélisation", "dbt"],
-      image: "",
-      github: "",
-      demo: "",
-      status: "Projet à documenter : schéma, transformations, documentation."
+      title: "Toys & Models – Tableau de bord de pilotage",
+      context: "Projet de groupe · Wild Code School · octobre – novembre 2026",
+      description: "Le directeur d’un distributeur de maquettes voulait piloter son entreprise avec un tableau de bord actualisable chaque matin. Nous avons traduit sa demande en 18 indicateurs, exploré sa base MySQL, construit un modèle en étoile, puis livré un tableau de bord Power BI couvrant les ventes, la finance, la logistique et les ressources humaines.",
+      highlights: [
+        "Modèle en étoile en SQL : 2 tables de faits, 4 dimensions",
+        "15 KPI sur 18 livrés, calculés en mesures DAX",
+        "Enseignements clés : +30 % de CA en un an, 40 % de marge, dépendance à quelques clients",
+        "Limites documentées et recommandations présentées au directeur",
+        "Ma contribution : conception et SQL du modèle en étoile, partie Ventes, mesures DAX, documentation"
+      ],
+      technologies: ["SQL", "MySQL", "Modèle en étoile", "Power BI", "Power Query", "DAX", "Agile"],
+      image: "assets/toys-models-ventes.jpg",
+      github: "https://github.com/kelly-lachance/toys_and_models",
+      demo: ""
     }
   ],
- 
+
   skillsIntro: "Un socle technique en développement, enrichi par mon approche métier et ma curiosité.",
   skills: [
     { icon: "⌘", title: "Hard skills", items: ["Python · Pandas · NumPy", "SQL · PostgreSQL", "Power BI · Excel", "Git · GitHub", "Analyse & visualisation de données"], note: "Niveaux à préciser" },
     { icon: "✳", title: "Soft skills", items: ["Rigueur & sens de l’analyse", "Curiosité & apprentissage continu", "Esprit de synthèse", "Résolution de problèmes", "Communication & collaboration"], note: "À illustrer par des exemples" },
     { icon: "↗", title: "En apprentissage", items: ["Data Engineering", "ETL / ELT & pipelines", "Orchestration (Airflow)", "Modélisation & qualité des données", "Cloud & bonnes pratiques"], note: "Progression en cours" }
   ],
- 
+
   contact: {
     title: "Restons connectés.",
     text: "À la recherche d’une alternance en Data Engineering.\nPartante pour échanger autour de la data et des sciences du vivant.",
@@ -89,6 +71,6 @@ const PORTFOLIO = {
       { label: "↓ CV", url: "assets/Kelly-Lachance-CV.pdf" }
     ]
   },
- 
+
   footer: "© Kelly Lachance · Portfolio Data · 2026"
 };
