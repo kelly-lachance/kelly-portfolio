@@ -28,7 +28,7 @@ const PORTFOLIO = {
     ]
   },
 
-  projectsIntro: "Les projets que j’ai menés pendant ma formation, du besoin métier jusqu’à la restitution des résultats.",
+  projectsIntro: "",
 
   // AJOUTER UN PROJET : copier un objet complet dans ce tableau.
   // context : ligne courte affichée au-dessus du titre (facultatif)
@@ -48,7 +48,7 @@ const PORTFOLIO = {
         "Ma contribution : conception et SQL du modèle en étoile, partie Ventes, mesures DAX, documentation"
       ],
       technologies: ["SQL", "MySQL", "Modèle en étoile", "Power BI", "Power Query", "DAX", "Agile"],
-      image: "assets/toys-models-ventes.jpg",
+      image: "toys-models-ventes.jpg",
       github: "https://github.com/kelly-lachance/toys_and_models",
       demo: ""
     }
