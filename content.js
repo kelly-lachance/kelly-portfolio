@@ -6,7 +6,7 @@
 const PORTFOLIO = {
   identity: {
     name: "Kelly Lachance",
-    eyebrow: "Data · Life Sciences · Agronomy",
+    eyebrow: "Data · Science du vivant · Agronomie",
     headline: "Data Analyst en formation | Future Data Engineer",
     // Texte court affiché en haut de la page, sous le titre
     about: [
@@ -14,7 +14,7 @@ const PORTFOLIO = {
       "Ce qui me motive : partir de données brutes, les structurer et en tirer des réponses concrètes."
     ],
     photo: "kelly-profile.png",
-    cv: "" // Exemple : "Kelly-Lachance-CV.pdf"
+    cv: "Kelly-Lachance-CV.pdf" // Exemple : "Kelly-Lachance-CV.pdf"
   },
 
   // SECTION « À PROPOS » : titre + un élément du tableau par paragraphe
@@ -23,7 +23,7 @@ const PORTFOLIO = {
     paragraphs: [
       "Ingénieure AgroParisTech, j’ai passé dix ans chez Deloitte dans le financement de l’innovation, jusqu’au poste de Senior Manager. J’y ai accompagné des entreprises de l’agronomie, de l’agroalimentaire, de l’environnement et des Life Sciences dans leurs projets de R&D : comprendre leurs travaux, analyser leurs données techniques et financières, puis présenter mes conclusions à leurs directions. J’y ai aussi géré un portefeuille clients de 900 k€ et managé des équipes de 3 à 10 consultants.",
       "Avec le temps, j’ai eu envie d’un nouveau défi et d’un métier plus opérationnel. Cette reconversion est aussi un retour à ce qui m’a toujours animée : les sciences, la compréhension des phénomènes et la résolution de problèmes. La data s’est imposée naturellement : elle permet de passer de l’analyse à des réalisations concrètes, sur des sujets très variés.",
-      "Après un an d’apprentissage autonome de Python et SQL, j’ai rejoint la Wild Code School pour me former au métier de Data Analyst. Je m’intéresse particulièrement à la manière dont les données sont produites, structurées et exploitées : à terme, j’aimerais évoluer vers le data engineering.",
+      "Après un an d’apprentissage autonome de Python et SQL, j’ai rejoint la Wild Code School pour me former au métier de Data Analyst. Je m’intéresse particulièrement à la manière dont les données sont produites, structurées et exploitées : je recherche aujourd’hui une alternance en data engineering à partir de mars 2027.",
       "Pragmatique, autonome et persévérante, j’aime comprendre comment les choses fonctionnent, creuser les sujets et trouver des solutions. J’apporte à la data la rigueur d’une scientifique et la compréhension des enjeux business d’une consultante."
     ]
   },
@@ -63,7 +63,7 @@ const PORTFOLIO = {
 
   contact: {
     title: "Restons connectés.",
-    text: "À la recherche d’une alternance en Data Engineering.",
+    text: "À la recherche d’une alternance en Data Engineering à partir de mars 2027.",
     links: [
       { label: "✉ Email", url: "mailto:kelly.lachance99@gmail.com" },
       { label: "in LinkedIn", url: "https://www.linkedin.com/in/kelly-lachance09" },
