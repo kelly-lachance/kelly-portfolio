@@ -68,7 +68,7 @@ const PORTFOLIO = {
       { label: "✉ Email", url: "mailto:kelly.lachance99@gmail.com" },
       { label: "in LinkedIn", url: "https://www.linkedin.com/in/kelly-lachance09" },
       { label: "⌘ GitHub", url: "https://github.com/kelly-lachance" },
-      { label: "↓ CV", url: "assets/Kelly-Lachance-CV.pdf" }
+      { label: "↓ CV", url: "Kelly-Lachance-CV.pdf" }
     ]
   },
 
