@@ -69,7 +69,7 @@ const PORTFOLIO = {
 
   contact: {
     title: "Restons connectés.",
-    text: "À la recherche d’une alternance en Data Engineering.\\nPartante pour échanger autour de la data et des sciences du vivant.",
+    text: "À la recherche d’une alternance en Data Engineering.\nPartante pour échanger autour de la data et des sciences du vivant.",
     links: [
       { label: "✉ Email", url: "mailto:EMAIL_A_COMPLETER" },
       { label: "in LinkedIn", url: "https://www.linkedin.com/in/URL_A_COMPLETER" },
