@@ -20,17 +20,18 @@ h3{margin:0 0 10px;color:var(--forest)}.lead{font-size:1.12rem;max-width:720px;c
 .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}.btn{display:inline-flex;padding:12px 18px;border-radius:999px;background:var(--forest);color:white;font-weight:600;font-size:.9rem;border:1px solid var(--forest)}.btn.alt{background:transparent;color:var(--forest)}
 section{padding:78px 0}.section-head{display:grid;grid-template-columns:.8fr 1.2fr;gap:45px;align-items:end;margin-bottom:30px}.section-head p{color:var(--muted);margin:0}.kicker{font-size:.75rem;letter-spacing:.18em;text-transform:uppercase;color:var(--sage);font-weight:700}
 .projects{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:24px;box-shadow:0 8px 22px #193d3008;transition:.2s;display:flex;flex-direction:column}.card:hover{transform:translateY(-4px);box-shadow:0 14px 30px #193d3012}.number{font:1.8rem Georgia,serif;color:var(--sage);margin-bottom:22px}.tags{display:flex;gap:7px;flex-wrap:wrap;margin:15px 0}.tag{font-size:.75rem;background:#e9eee4;color:#46634b;border-radius:99px;padding:5px 9px}.project-image{width:100%;height:150px;object-fit:cover;border-radius:12px;margin-bottom:18px}.project-link{margin-top:auto;padding-top:18px;color:var(--forest);font-weight:650}.placeholder{border:1px dashed #b7c4b4;background:#f7f8f2;border-radius:12px;padding:12px;color:#738174;font-size:.86rem}
+.about{background:var(--paper)}.about-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:45px}.about-text p{margin:0 0 18px;color:#46564b;font-size:1.05rem}.about-text p:last-child{margin-bottom:0}
 .skills{background:#e9eee5}.skill-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.skill-card{background:#fffdf8;border-radius:16px;padding:24px}.skill-card ul{padding-left:18px;margin:12px 0 0;color:#536257}.skill-card li{margin:7px 0}.status{display:inline-block;font-size:.72rem;color:#58725a;background:#e4ecdf;padding:5px 9px;border-radius:999px;margin-top:12px}
 .contact{background:var(--forest);color:#f7f4eb;padding:70px 0}.contact h2{color:#f7f4eb}.contact p{color:#d4dfd2}.contact-grid{display:flex;justify-content:space-between;gap:40px;align-items:center}.contact-links{display:flex;gap:12px;flex-wrap:wrap}.contact-links a{border:1px solid #a5b8a3;border-radius:999px;padding:10px 16px}
 footer{padding:20px 0;color:#758176;font-size:.8rem;text-align:center}
-@media(max-width:800px){.navlinks{gap:12px;font-size:.8rem}.hero-grid{grid-template-columns:1fr;gap:25px}.portrait{width:150px;height:150px}.section-head{grid-template-columns:1fr;gap:8px}.projects,.skill-grid{grid-template-columns:1fr}.contact-grid{display:block}.contact-links{margin-top:24px}}
+@media(max-width:800px){.navlinks{gap:12px;font-size:.8rem}.hero-grid{grid-template-columns:1fr;gap:25px}.portrait{width:150px;height:150px}.section-head,.about-grid{grid-template-columns:1fr;gap:8px}.projects,.skill-grid{grid-template-columns:1fr}.contact-grid{display:block}.contact-links{margin-top:24px}}
 @media(max-width:520px){nav{align-items:flex-start;flex-direction:column}.navlinks{flex-wrap:wrap}.hero{padding:42px 0}.hero-grid{gap:18px}section{padding:55px 0}}
 </style>
 </head>
 <body>
 <header class="wrap"><nav>
 <a class="brand" href="#accueil"><span class="leaf">✦</span> <span id="brandName">Kelly Lachance</span></a>
-<div class="navlinks"><a href="#accueil">Accueil</a><a href="#projets">Projets</a><a href="#competences">Compétences</a><a href="#contact">Contact</a></div>
+<div class="navlinks"><a href="#accueil">Accueil</a><a href="#apropos">À propos</a><a href="#projets">Projets</a><a href="#competences">Compétences</a><a href="#contact">Contact</a></div>
 </nav></header>
 <main>
 <section class="hero" id="accueil"><div class="wrap hero-grid">
@@ -39,6 +40,7 @@ footer{padding:20px 0;color:#758176;font-size:.8rem;text-align:center}
 <p class="lead" id="about1"></p><p class="lead" id="about2"></p>
 <div class="actions"><a class="btn" href="#projets">Découvrir mes projets ↗</a><a class="btn alt" id="cvButton" href="#" target="_blank">Télécharger mon CV</a></div></div>
 </div></section>
+<section class="about" id="apropos"><div class="wrap about-grid"><div><div class="kicker">01 / À propos</div><h2 id="aboutTitle"></h2></div><div class="about-text" id="aboutText"></div></div></section>
 <section id="projets"><div class="wrap"><div class="section-head"><div><div class="kicker">02 / Portfolio</div><h2>Mes projets<br>Data</h2></div><p id="projectsIntro"></p></div><div class="projects" id="projectsGrid"></div></div></section>
 <section class="skills" id="competences"><div class="wrap"><div class="section-head"><div><div class="kicker">03 / Savoir-faire</div><h2>Mes compétences</h2></div><p id="skillsIntro"></p></div><div class="skill-grid" id="skillsGrid"></div></div></section>
 <section id="contact" class="contact"><div class="wrap contact-grid"><div><div class="kicker" style="color:#b9cbb5">04 / Contact</div><h2 id="contactTitle"></h2><p id="contactText"></p></div><div class="contact-links" id="contactLinks"></div></div></section>
@@ -52,6 +54,8 @@ $("eyebrow").textContent=c.identity.eyebrow; $("headline").textContent=c.identit
 $("about1").textContent=c.identity.about[0]; $("about2").textContent=c.identity.about[1];
 $("portrait").src=c.identity.photo; $("portrait").alt="Portrait de "+c.identity.name;
 $("cvButton").href=c.identity.cv || "#";
+$("aboutTitle").textContent=c.aboutSection.title;
+$("aboutText").innerHTML=c.aboutSection.paragraphs.map(t=>`<p>${t}</p>`).join("");
 $("projectsIntro").textContent=c.projectsIntro;
 $("skillsIntro").textContent=c.skillsIntro;
 $("contactTitle").textContent=c.contact.title; $("contactText").innerHTML=c.contact.text.replace(/\n/g,"<br>");
