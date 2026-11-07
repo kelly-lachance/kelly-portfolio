@@ -14,7 +14,7 @@ const PORTFOLIO = {
       "Ce qui me motive : partir de données brutes, les structurer et en tirer des réponses concrètes."
     ],
     photo: "kelly-profile.png",
-    cv: "" // Exemple : "assets/Kelly-Lachance-CV.pdf"
+    cv: "" // Exemple : "Kelly-Lachance-CV.pdf"
   },
 
   // SECTION « À PROPOS » : titre + un élément du tableau par paragraphe
