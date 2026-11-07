@@ -8,6 +8,7 @@ const PORTFOLIO = {
     name: "Kelly Lachance",
     eyebrow: "Data · Life Sciences · Agronomy",
     headline: "Data Analyst en formation | Future Data Engineer",
+    // Texte court affiché en haut de la page, sous le titre
     about: [
       "À la croisée des sciences du vivant, de l’agronomie et de la data, je développe mes compétences pour transformer les données en informations fiables, structurées et exploitables.",
       "Curieuse, rigoureuse et orientée résolution de problèmes, je souhaite approfondir mes compétences en Data Engineering et contribuer à la conception de pipelines de données robustes."
@@ -15,9 +16,20 @@ const PORTFOLIO = {
     photo: "kelly-profile.png",
     cv: "" // Exemple : "assets/Kelly-Lachance-CV.pdf"
   },
-
+ 
+  // SECTION « À PROPOS » : titre + un élément du tableau par paragraphe
+  aboutSection: {
+    title: "Un parcours scientifique, une nouvelle direction",
+    paragraphs: [
+      "Ingénieure AgroParisTech, j’ai passé dix ans chez Deloitte dans le financement de l’innovation, jusqu’au poste de Senior Manager. J’y ai accompagné des entreprises de l’agronomie, de l’agroalimentaire, de l’environnement et des Life Sciences dans leurs projets de R&D : comprendre leurs travaux, analyser leurs données techniques et financières, puis présenter mes conclusions à leurs directions. J’y ai aussi géré un portefeuille clients de 900 k€ et managé des équipes de 3 à 10 consultants.",
+      "Avec le temps, j’ai eu envie d’un nouveau défi et d’un métier plus opérationnel. Cette reconversion est aussi un retour à ce qui m’a toujours animée : les sciences, la compréhension des phénomènes et la résolution de problèmes. La data s’est imposée naturellement : elle permet de passer de l’analyse à des réalisations concrètes, sur des sujets très variés.",
+      "Après un an d’apprentissage autonome de Python et SQL, j’ai rejoint la Wild Code School pour me former au métier de Data Analyst. Je m’intéresse particulièrement à la manière dont les données sont produites, structurées et exploitées : à terme, j’aimerais évoluer vers le data engineering.",
+      "Pragmatique, autonome et persévérante, j’aime comprendre comment les choses fonctionnent, creuser les sujets et trouver des solutions. J’apporte à la data la rigueur d’une scientifique et la compréhension des enjeux business d’une consultante."
+    ]
+  },
+ 
   projectsIntro: "Une sélection de projets qui illustrent ma montée en compétences : de l’analyse exploratoire à la conception de solutions data. Chaque fiche pourra détailler la problématique, les données, la méthode et les résultats.",
-
+ 
   // AJOUTER UN PROJET : copier un objet complet dans ce tableau.
   // image : chemin vers une image dans assets/ (facultatif)
   // github et demo : URL (facultatives)
@@ -59,14 +71,14 @@ const PORTFOLIO = {
       status: "Projet à documenter : schéma, transformations, documentation."
     }
   ],
-
+ 
   skillsIntro: "Un socle technique en développement, enrichi par mon approche métier et ma curiosité.",
   skills: [
     { icon: "⌘", title: "Hard skills", items: ["Python · Pandas · NumPy", "SQL · PostgreSQL", "Power BI · Excel", "Git · GitHub", "Analyse & visualisation de données"], note: "Niveaux à préciser" },
     { icon: "✳", title: "Soft skills", items: ["Rigueur & sens de l’analyse", "Curiosité & apprentissage continu", "Esprit de synthèse", "Résolution de problèmes", "Communication & collaboration"], note: "À illustrer par des exemples" },
     { icon: "↗", title: "En apprentissage", items: ["Data Engineering", "ETL / ELT & pipelines", "Orchestration (Airflow)", "Modélisation & qualité des données", "Cloud & bonnes pratiques"], note: "Progression en cours" }
   ],
-
+ 
   contact: {
     title: "Restons connectés.",
     text: "À la recherche d’une alternance en Data Engineering.\nPartante pour échanger autour de la data et des sciences du vivant.",
@@ -77,6 +89,6 @@ const PORTFOLIO = {
       { label: "↓ CV", url: "assets/Kelly-Lachance-CV.pdf" }
     ]
   },
-
+ 
   footer: "© Kelly Lachance · Portfolio Data · 2026"
 };
