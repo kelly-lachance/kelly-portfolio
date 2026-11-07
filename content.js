@@ -54,11 +54,11 @@ const PORTFOLIO = {
     }
   ],
 
-  skillsIntro: "Un socle technique en développement, enrichi par mon approche métier et ma curiosité.",
+  skillsIntro: "Un socle technique qui s’enrichit chaque semaine, appuyé sur dix ans d’expérience en conseil.",
   skills: [
-    { icon: "⌘", title: "Hard skills", items: ["Python · Pandas · NumPy", "SQL · PostgreSQL", "Power BI · Excel", "Git · GitHub", "Analyse & visualisation de données"], note: "Niveaux à préciser" },
-    { icon: "✳", title: "Soft skills", items: ["Rigueur & sens de l’analyse", "Curiosité & apprentissage continu", "Esprit de synthèse", "Résolution de problèmes", "Communication & collaboration"], note: "À illustrer par des exemples" },
-    { icon: "↗", title: "En apprentissage", items: ["Data Engineering", "ETL / ELT & pipelines", "Orchestration (Airflow)", "Modélisation & qualité des données", "Cloud & bonnes pratiques"], note: "Progression en cours" }
+    { icon: "⌘", title: "Hard skills", items: ["Python · Pandas · NumPy", "SQL · MySQL · modèle en étoile", "Power BI · Power Query · DAX", "Excel avancé", "Web scraping · API · JSON", "Géocodage · Streamlit · HTML", "Git · GitHub"], note: "Pratiqués en formation et en projets" },
+    { icon: "✳", title: "Soft skills", items: ["Compréhension des enjeux métier", "Rigueur & esprit d’analyse", "Synthèse & vulgarisation", "Communication avec les directions", "Gestion de projet & des priorités", "Travail en équipe & management"], note: "Développés en 10 ans de conseil" },
+    { icon: "↗", title: "En apprentissage", items: ["Machine Learning (Scikit-learn)", "Pipelines ETL / ELT", "Orchestration (Airflow)", "Cloud & bonnes pratiques"], note: "Prochaines étapes vers le Data Engineering" }
   ],
 
   contact: {
