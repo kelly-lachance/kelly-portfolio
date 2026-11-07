@@ -10,8 +10,8 @@ const PORTFOLIO = {
     headline: "Data Analyst en formation | Future Data Engineer",
     // Texte court affiché en haut de la page, sous le titre
     about: [
-      "À la croisée des sciences du vivant, de l’agronomie et de la data, je développe mes compétences pour transformer les données en informations fiables, structurées et exploitables.",
-      "Curieuse, rigoureuse et orientée résolution de problèmes, je souhaite approfondir mes compétences en Data Engineering et contribuer à la conception de pipelines de données robustes."
+      "Scientifique de formation, consultante pendant dix ans, je me tourne aujourd’hui vers la data.",
+      "Ce qui me motive : partir de données brutes, les structurer et en tirer des réponses concrètes."
     ],
     photo: "kelly-profile.png",
     cv: "" // Exemple : "assets/Kelly-Lachance-CV.pdf"
