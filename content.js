@@ -65,9 +65,9 @@ const PORTFOLIO = {
     title: "Restons connectés.",
     text: "À la recherche d’une alternance en Data Engineering.\nPartante pour échanger autour de la data et des sciences du vivant.",
     links: [
-      { label: "✉ Email", url: "mailto:EMAIL_A_COMPLETER" },
-      { label: "in LinkedIn", url: "https://www.linkedin.com/in/URL_A_COMPLETER" },
-      { label: "⌘ GitHub", url: "https://github.com/USERNAME_A_COMPLETER" },
+      { label: "✉ Email", url: "mailto:kelly.lachance99@gmail.com" },
+      { label: "in LinkedIn", url: "https://www.linkedin.com/in/kelly-lachance09" },
+      { label: "⌘ GitHub", url: "https://github.com/kelly-lachance" },
       { label: "↓ CV", url: "assets/Kelly-Lachance-CV.pdf" }
     ]
   },
