@@ -12,7 +12,7 @@ const PORTFOLIO = {
       "À la croisée des sciences du vivant, de l’agronomie et de la data, je développe mes compétences pour transformer les données en informations fiables, structurées et exploitables.",
       "Curieuse, rigoureuse et orientée résolution de problèmes, je souhaite approfondir mes compétences en Data Engineering et contribuer à la conception de pipelines de données robustes."
     ],
-    photo: "assets/kelly-profile.png",
+    photo: "kelly-profile.png",
     cv: "" // Exemple : "assets/Kelly-Lachance-CV.pdf"
   },
 
