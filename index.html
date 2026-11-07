@@ -16,15 +16,17 @@ nav{display:flex;justify-content:space-between;align-items:center;padding:22px 0
 .eyebrow{text-transform:uppercase;letter-spacing:.18em;font-size:.78rem;color:var(--sage);font-weight:700}
 h1{font:clamp(2.8rem,6vw,5.4rem)/1.04 Georgia,serif;margin:12px 0;color:var(--forest);letter-spacing:-.04em}
 h2{font:clamp(2rem,4vw,3rem)/1.1 Georgia,serif;color:var(--forest);margin:8px 0 18px;letter-spacing:-.025em}
-h3{margin:0 0 10px;color:var(--forest)}.lead{font-size:1.12rem;max-width:820px;color:#526258}
+h3{margin:0 0 10px;color:var(--forest)}.lead{font-size:1.12rem;max-width:820px;color:#526258;text-align:justify;hyphens:auto}
 .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}.btn{display:inline-flex;padding:12px 18px;border-radius:999px;background:var(--forest);color:white;font-weight:600;font-size:.9rem;border:1px solid var(--forest)}.btn.alt{background:transparent;color:var(--forest)}
 section{padding:78px 0}.section-head{display:grid;grid-template-columns:.8fr 1.2fr;gap:45px;align-items:end;margin-bottom:30px}.section-head p{color:var(--muted);margin:0}.kicker{font-size:.75rem;letter-spacing:.18em;text-transform:uppercase;color:var(--sage);font-weight:700}
 .projects{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:24px;box-shadow:0 8px 22px #193d3008;transition:.2s;display:flex;flex-direction:column}.card:hover{transform:translateY(-4px);box-shadow:0 14px 30px #193d3012}.number{font:1.8rem Georgia,serif;color:var(--sage);margin-bottom:22px}.tags{display:flex;gap:7px;flex-wrap:wrap;margin:15px 0}.tag{font-size:.75rem;background:#e9eee4;color:#46634b;border-radius:99px;padding:5px 9px}.project-image{width:100%;height:150px;object-fit:cover;border-radius:12px;margin-bottom:18px}.project-link{margin-top:auto;padding-top:18px;color:var(--forest);font-weight:650}.placeholder{border:1px dashed #b7c4b4;background:#f7f8f2;border-radius:12px;padding:12px;color:#738174;font-size:.86rem}
 .about{background:var(--paper)}.about-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:45px}.about-text p{margin:0 0 18px;color:#46564b;font-size:1.05rem;text-align:justify;hyphens:auto}.about-text p:last-child{margin-bottom:0}
+.meta{font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:var(--sage);font-weight:700;margin-bottom:8px}.highlights{margin:4px 0 0;padding-left:18px;color:#46564b}.highlights li{margin:5px 0}
+.projects.single{grid-template-columns:1fr}.projects.single .card{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:32px;padding:28px;align-items:start}.projects.single .project-image{height:auto;max-height:none;object-fit:contain;margin:0;display:block}.image-link{display:block;border-radius:12px;overflow:hidden}.image-caption{font-size:.78rem;color:var(--muted);margin-top:8px}.projects.single .number{display:none}.projects.single .card:hover{transform:none}
 .skills{background:#e9eee5}.skill-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.skill-card{background:#fffdf8;border-radius:16px;padding:24px}.skill-card ul{padding-left:18px;margin:12px 0 0;color:#536257}.skill-card li{margin:7px 0}.status{display:inline-block;font-size:.72rem;color:#58725a;background:#e4ecdf;padding:5px 9px;border-radius:999px;margin-top:12px}
 .contact{background:var(--forest);color:#f7f4eb;padding:70px 0}.contact h2{color:#f7f4eb}.contact p{color:#d4dfd2}.contact-grid{display:flex;justify-content:space-between;gap:40px;align-items:center}.contact-links{display:flex;gap:12px;flex-wrap:wrap}.contact-links a{border:1px solid #a5b8a3;border-radius:999px;padding:10px 16px}
 footer{padding:20px 0;color:#758176;font-size:.8rem;text-align:center}
-@media(max-width:800px){.navlinks{gap:12px;font-size:.8rem}.hero-grid{grid-template-columns:1fr;gap:25px}.portrait{width:150px;height:150px}.section-head,.about-grid{grid-template-columns:1fr;gap:8px}.about-text p{text-align:left;hyphens:manual}.projects,.skill-grid{grid-template-columns:1fr}.contact-grid{display:block}.contact-links{margin-top:24px}}
+@media(max-width:800px){.navlinks{gap:12px;font-size:.8rem}.hero-grid{grid-template-columns:1fr;gap:25px}.portrait{width:150px;height:150px}.section-head,.about-grid{grid-template-columns:1fr;gap:8px}.about-text p,.lead{text-align:left;hyphens:manual}.projects,.skill-grid{grid-template-columns:1fr}.projects.single .card{grid-template-columns:1fr;gap:18px;padding:22px}.contact-grid{display:block}.contact-links{margin-top:24px}}
 @media(max-width:520px){nav{align-items:flex-start;flex-direction:column}.navlinks{flex-wrap:wrap}.hero{padding:42px 0}.hero-grid{gap:18px}section{padding:55px 0}}
 </style>
 </head>
@@ -60,14 +62,20 @@ $("projectsIntro").textContent=c.projectsIntro;
 $("skillsIntro").textContent=c.skillsIntro;
 $("contactTitle").textContent=c.contact.title; $("contactText").innerHTML=c.contact.text.replace(/\n/g,"<br>");
 $("footer").textContent=c.footer;
+if(c.projects.length===1) $("projectsGrid").classList.add("single");
 $("projectsGrid").innerHTML=c.projects.map((p,i)=>`
 <article class="card">
-${p.image?`<img class="project-image" src="${p.image}" alt="">`:''}
-<div class="number">${String(i+1).padStart(2,'0')}</div><h3>${p.title}</h3><p>${p.description}</p>
+${p.image?`<div><a class="image-link" href="${p.image}" target="_blank" rel="noopener"><img class="project-image" src="${p.image}" alt="Aperçu du projet ${p.title}"></a><div class="image-caption">Cliquer pour agrandir</div></div>`:''}
+<div class="card-body">
+<div class="number">${String(i+1).padStart(2,'0')}</div>
+${p.context?`<div class="meta">${p.context}</div>`:''}
+<h3>${p.title}</h3><p>${p.description}</p>
+${p.highlights&&p.highlights.length?`<ul class="highlights">${p.highlights.map(x=>`<li>${x}</li>`).join("")}</ul>`:''}
 <div class="tags">${p.technologies.map(t=>`<span class="tag">${t}</span>`).join("")}</div>
 ${p.status?`<div class="placeholder">${p.status}</div>`:''}
-${p.github?`<a class="project-link" href="${p.github}" target="_blank" rel="noopener">Voir le projet GitHub ↗</a>`:''}
+${p.github?`<a class="project-link" href="${p.github}" target="_blank" rel="noopener">Voir le projet sur GitHub ↗</a>`:''}
 ${p.demo?`<a class="project-link" href="${p.demo}" target="_blank" rel="noopener">Voir la démo ↗</a>`:''}
+</div>
 </article>`).join("");
 $("skillsGrid").innerHTML=c.skills.map(s=>`<div class="skill-card"><h3>${s.icon} ${s.title}</h3><ul>${s.items.map(x=>`<li>${x}</li>`).join("")}</ul><span class="status">${s.note}</span></div>`).join("");
 $("contactLinks").innerHTML=c.contact.links.map(l=>`<a href="${l.url}" ${l.url.startsWith("http")?'target="_blank" rel="noopener"':''}>${l.label}</a>`).join("");
