@@ -74,9 +74,9 @@ const PORTFOLIO = {
  
   skillsIntro: "Un socle technique qui s’enrichit chaque semaine, appuyé sur dix ans d’expérience en conseil.",
   skills: [
-    { icon: "⌘", title: "Hard skills", items: ["Python · Pandas · NumPy", "SQL · MySQL · SQLite · modèle en étoile", "Power BI · Power Query · DAX", "Excel avancé", "Web scraping · API · JSON", "Géocodage · Streamlit · HTML", "Git · GitHub"], note: "Pratiqués en formation et en projets" },
+    { icon: "⌘", title: "Hard skills", items: ["Python · Pandas · NumPy", "Machine Learning · Scikit-learn", "SQL · MySQL · SQLite · modèle en étoile", "Power BI · Power Query · DAX", "Excel avancé", "Web scraping · API · JSON", "Géocodage · Streamlit · HTML", "Git · GitHub"], note: "Pratiqués en formation et en projets" },
     { icon: "✳", title: "Soft skills", items: ["Compréhension des enjeux métier", "Rigueur & esprit d’analyse", "Synthèse & vulgarisation", "Communication avec les directions", "Gestion de projet & des priorités", "Travail en équipe & management"], note: "Développés en 10 ans de conseil" },
-    { icon: "↗", title: "En apprentissage", items: ["Pipelines ETL / ELT", "dbt · DuckDB", "Orchestration (Prefect, Airflow)", "Cloud (Snowflake) & bonnes pratiques", "Machine Learning (Scikit-learn)"], note: "Prochaines étapes vers le Data Engineering" }
+    { icon: "↗", title: "En apprentissage", items: ["Pipelines ETL / ELT", "dbt · DuckDB", "Orchestration (Prefect, Airflow)", "Cloud (Snowflake) & bonnes pratiques"], note: "Prochaines étapes vers le Data Engineering" }
   ],
  
   contact: {
