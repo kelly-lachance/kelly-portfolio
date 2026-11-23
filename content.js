@@ -16,7 +16,7 @@ const PORTFOLIO = {
     photo: "kelly-profile.png",
     cv: "Kelly-Lachance-CV.pdf" // Exemple : "Kelly-Lachance-CV.pdf"
   },
-
+ 
   // SECTION « À PROPOS » : titre + un élément du tableau par paragraphe
   aboutSection: {
     title: "Un parcours scientifique, une nouvelle direction",
@@ -27,15 +27,33 @@ const PORTFOLIO = {
       "Pragmatique, autonome et persévérante, j’aime comprendre comment les choses fonctionnent, creuser les sujets et trouver des solutions. J’apporte à la data la rigueur d’une scientifique et la compréhension des enjeux business d’une consultante."
     ]
   },
-
+ 
   projectsIntro: "",
-
+ 
   // AJOUTER UN PROJET : copier un objet complet dans ce tableau.
   // context : ligne courte affichée au-dessus du titre (facultatif)
   // highlights : points clés affichés en liste (facultatif)
+  // status : encadré en pointillés, ex. pour un projet en cours (facultatif)
   // image : chemin vers une image dans assets/ (facultatif)
   // github et demo : URL (facultatives)
   projects: [
+    {
+      title: "Sécheresse – Pipeline de suivi des nappes d’Île-de-France",
+      context: "Projet personnel · Data Engineering · en cours depuis novembre 2026",
+      description: "Les nappes phréatiques alimentent l’irrigation, l’eau potable et les rivières en été : suivre leur niveau permet de voir une sécheresse s’installer bien avant qu’elle soit visible en surface. Je construis pas à pas un pipeline ELT qui collecte chaque jour les mesures des piézomètres franciliens depuis l’API publique Hub’Eau, les historise dans une base locale et préparera des indicateurs de sécheresse dans un tableau de bord.",
+      highlights: [
+        "Extraction de 6 471 stations sur 8 départements, sélection SQL de 64 stations suivies depuis au moins 10 ans",
+        "634 890 mesures chargées, jusqu’à plus de 50 ans d’historique",
+        "Ingestion robuste : pagination, relances automatiques en cas de panne, contrôles de complétude",
+        "Chargement incrémental et idempotent (clé composite, INSERT OR REPLACE)",
+        "À venir : DuckDB, modélisation dbt avec tests, Snowflake, orchestration Prefect, tableau de bord Streamlit"
+      ],
+      technologies: ["Python", "API REST", "JSON", "SQL", "SQLite", "Git", "ELT"],
+      image: "secheresse-en-cours.png",
+      status: "🚧 Projet en cours : extraction et chargement terminés. Prochaine étape : migration vers DuckDB puis modélisation dbt.",
+      github: "https://github.com/kelly-lachance/eau_secheresse",
+      demo: ""
+    },
     {
       title: "Toys & Models – Tableau de bord de pilotage",
       context: "Projet de groupe · Wild Code School · octobre – novembre 2026",
@@ -53,14 +71,14 @@ const PORTFOLIO = {
       demo: ""
     }
   ],
-
+ 
   skillsIntro: "Un socle technique qui s’enrichit chaque semaine, appuyé sur dix ans d’expérience en conseil.",
   skills: [
-    { icon: "⌘", title: "Hard skills", items: ["Python · Pandas · NumPy", "SQL · MySQL · modèle en étoile", "Power BI · Power Query · DAX", "Excel avancé", "Web scraping · API · JSON", "Géocodage · Streamlit · HTML", "Git · GitHub"], note: "Pratiqués en formation et en projets" },
+    { icon: "⌘", title: "Hard skills", items: ["Python · Pandas · NumPy", "SQL · MySQL · SQLite · modèle en étoile", "Power BI · Power Query · DAX", "Excel avancé", "Web scraping · API · JSON", "Géocodage · Streamlit · HTML", "Git · GitHub"], note: "Pratiqués en formation et en projets" },
     { icon: "✳", title: "Soft skills", items: ["Compréhension des enjeux métier", "Rigueur & esprit d’analyse", "Synthèse & vulgarisation", "Communication avec les directions", "Gestion de projet & des priorités", "Travail en équipe & management"], note: "Développés en 10 ans de conseil" },
-    { icon: "↗", title: "En apprentissage", items: ["Machine Learning (Scikit-learn)", "Pipelines ETL / ELT", "Orchestration (Airflow)", "Cloud & bonnes pratiques"], note: "Prochaines étapes vers le Data Engineering" }
+    { icon: "↗", title: "En apprentissage", items: ["Pipelines ETL / ELT", "dbt · DuckDB", "Orchestration (Prefect, Airflow)", "Cloud (Snowflake) & bonnes pratiques", "Machine Learning (Scikit-learn)"], note: "Prochaines étapes vers le Data Engineering" }
   ],
-
+ 
   contact: {
     title: "Restons connectés.",
     text: "À la recherche d’une alternance en Data Engineering à partir de mars 2027.",
@@ -71,6 +89,7 @@ const PORTFOLIO = {
       { label: "↓ CV", url: "Kelly-Lachance-CV.pdf" }
     ]
   },
-
+ 
   footer: "© Kelly Lachance · Portfolio Data · 2026"
 };
+ 
